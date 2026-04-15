@@ -1,0 +1,133 @@
+.rsvp-section-modern {
+  padding: 8rem 2rem;
+  background-color: #EBE8E3;
+  display: flex;
+  justify-content: center;
+}
+
+.rsvp-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.rsvp-title {
+  font-size: clamp(3rem, 5vw, 4rem);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.rsvp-text {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.modern-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding: 1rem 0;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.4s ease;
+  border-radius: 0;
+  width: 100%;
+}
+
+.modern-input:focus {
+  border-bottom-color: var(--text);
+}
+
+.modern-input::placeholder {
+  color: rgba(0,0,0,0.4);
+}
+
+.attendance-group {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.attendance-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.attendance-options {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .attendance-options {
+    flex-direction: row;
+  }
+}
+
+.attendance-btn {
+  flex: 1;
+  padding: 1.2rem;
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.15);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attendance-btn:hover {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.attendance-btn.selected {
+  background-color: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.guest-input-wrapper {
+  animation: fadeSlideUp 0.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.modern-submit {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--text);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.modern-submit:hover {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+.rsvp-success {
+  padding: 4rem 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+}

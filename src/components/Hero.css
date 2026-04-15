@@ -1,0 +1,140 @@
+/* src/components/Hero.css */
+.modern-hero {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+.hero-background-composition {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 900px) {
+  .hero-background-composition {
+    width: 65%; /* Takes up exactly the right side, so gradient perfectly meets the text */
+  }
+}
+
+.hero-image-wrap {
+  width: 100%;
+  height: 100%;
+  animation: fadeSlideUp 1.6s ease-out forwards;
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.fade-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(15%) contrast(1.1);
+  transition: transform 12s ease;
+}
+
+.hero-background-composition:hover .fade-image {
+  transform: scale(1.05);
+}
+
+.hero-text-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  pointer-events: none;
+}
+
+.hero-dates {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.6;
+}
+
+.small-caps {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.date-numbers {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-headline {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.85;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.name-mia {
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+.ampersand {
+  font-style: italic;
+  font-size: 0.9em;
+  color: var(--accent);
+  margin-left: 2rem;
+  transform: translateY(-5px);
+}
+
+.name-johnny {
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  margin-left: 1rem;
+}
+
+.hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 380px;
+  color: #2a2a2a;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px var(--bg); 
+}
+
+.modern-btn {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 1rem 3rem;
+  background-color: var(--text);
+  color: var(--bg);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  border: 1px solid var(--text);
+  pointer-events: auto; /* Let clicks work over background */
+}
+
+.modern-btn:hover {
+  background-color: transparent;
+  color: var(--text);
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
