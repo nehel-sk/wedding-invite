@@ -1,12 +1,13 @@
 import React from 'react';
 import './Hero.css';
+import coupleImg from '../assets/couple.png';
 
 const Hero = () => {
   return (
     <section className="modern-hero">
       <div className="hero-background-composition">
         <div className="hero-image-wrap">
-          <img src="/couple.png" alt="Couple" className="fade-image" />
+          <img src={coupleImg} alt="Couple" className="fade-image" />
         </div>
       </div>
 
